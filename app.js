@@ -16,6 +16,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 
+//add authentication for all routes
+app.all('*', requireAuthentication);
+
+
+//add authentication for specific routes
+add.all('/grades/*', requireAuthentication);
+
+
+// get all courses data from the list
 app.get('/', function (req, res) {
   res.json(courses);
 });
