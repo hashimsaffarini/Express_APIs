@@ -92,3 +92,8 @@ app.get('/courses/express', function (req, res) {
 });
 
 app.listen(3003);
+
+/*
+the request from Client to Server: Get , Post , Put , Delete
+the response from Server to Client: Http status code 
+*/
