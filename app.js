@@ -83,5 +83,12 @@ app.delete('/:id', function (req, res) {
   }
 });
 
+//use for navigate to the courses/express page
+app.get('/courses', function (req, res) {
+  res.redirect('/courses/express');
+});
+app.get('/courses/express', function (req, res) {
+  res.send('Welcome to the express page');
+});
 
 app.listen(3003);
