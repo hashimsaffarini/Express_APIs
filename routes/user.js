@@ -1,1 +1,3 @@
-const router= require('express').Router();
+const router = require('express').Router();
+
+router.all('*', requireAuthentication, loadUser);
